@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+} 
+    
+body{
+    background-color: #cdfaf6;
+    width:100%; 
+    height:100%;
+   }
+
+    
+/* Importing fonts using font-face rule */
+@font-face {
+   font-family: mainNav_Head_Font;
+   src: url("Pacifica Condensed Regular.otf");
+   }
+@font-face {
+   font-family: Lombok_Font;
+   src: url("Lombok\ Regular.ttf");
+   }
+@font-face {
+   font-family: Oneday_Font;
+   src: url("ONEDAY.otf");
+   }
+@font-face {
+   font-family: avalea_Font;
+   src: url("AVALEA_.otf");
+   }
+
+@font-face {
+   font-family: patrickHandregular_Font;
+   src: url("patrick_hand_by_sirpatrick1st-d30hjvk.otf");
+   }
+
+
+      
+   /* font-family: mainNav_Head_Font; */
+   /* font-family: patrickHandregular_Font; */
+   /* font-family: Lombok_Font; */
+   /* font-family: Oneday_Font; */
+   /* font-family: avalea_Font; */
+   /* font-family: ghostoutline_Font; */
+   /* font-family: ghostregular_Font;  */
+
+header{
+    background-image: linear-gradient(to right,  #408d86 , #263339);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .logo_container{
+        width: 100%;
+        height: 150px;    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo{
+        width: 300px;
+        height: 150px;
+    }
+
+     .main-navigation-items{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+    }
+
+    .main-navigation-items>a{
+        color: #43A49B;
+        text-decoration: overline;
+        padding: 10px;
+        font-family: Lombok_Font;      
+        font-size: 24px;
+        font-weight: bold;
+        cursor:pointer;
+    }
+    
+    .main-navigation-items> a:hover
+    {
+       color:#cdfaf6;
+       text-decoration: line-through;
+    }
+    .main-navigation-items> a:active
+    {
+       color:#43A49B;
+       text-decoration: underline;
+    }
+
+
+/* Hamburger Navigation common */
+ /* Hamburger Symbol */
+ .navigator{
+    background-image: linear-gradient(to right,  #408d86 , #263339);
+    display: none;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 150px;
+    width: 100%;
+    padding:1rem;
+}
+
+
+.hamburger-icon{
+   position: relative;
+   height: min(50px,1.5vw);
+   width: min(50px,1.5vw);
+   box-shadow: 
+   0 0 5px #4d5655,
+   0 0 10px #000605,
+   0 0 20px #728f9e,
+   0 0 40px #408d86;
+   transition: .3s;
+   transition-delay: 1s;
+   cursor: pointer;
+   padding: 1rem;
+}
+
+.ham-bar{
+   background-color: rgb(255, 0, 0);
+   background-image: linear-gradient(135deg,  #000000 ,#408d86 );    
+   border-radius: 30px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width:70%;
+   height: 4px;
+   transform: translate(-50%,-50%);
+   transition: transform .6s, opacity .8s, top .6s;
+}
+
+
+.bar-top{top: 25%;}
+
+.bar-bottom{top:75%;}
+
+.hamburger-icon.active .bar-top{
+   transform: translate(-50%,-50%) rotate(-315deg);
+   top:50%;
+}
+
+.hamburger-icon.active .bar-mid{
+   opacity: 0;
+}
+
+.hamburger-icon.active .bar-bottom{
+   transform: translate(-50%,-50%) rotate(-225deg);
+   top: 50%;
+}
+
+/* Off-screen Navigation */
+.off-screen-menu{
+   background-color: #408d86;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top:150px;
+   right: -75%;
+   height: 100vh;
+   width:50%;
+   transition: right .5s;
+}
+
+.off-screen-menu.active{
+   right:0;
+} 
+
+.offnavigation{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction: column;
+    float: right;
+    width:100%;
+    gap:20px;
+}
+
+     
+.offnavigation> a
+{
+   display: block;
+   font-weight: 900;
+   text-decoration: overline;
+   padding: 5%;
+   color: #ccc;
+   cursor:pointer;
+   font-size:7.5vw;
+   line-height: 10vh;
+   font-family: Lombok_Font;
+}
+
+.offnavigation> a:hover
+{
+   color:#cdfaf6;
+   text-decoration: line-through;
+}
+
+.offnavigation> a:active
+{
+   color:#43A49B;
+   text-decoration:underline;
+}
+
+
+
+
+/*Intro section  */
+main{
+   position: relative;
+   /* top: 150px; */
+   background-color: #D0EBEA;
+   padding:5% 5% 5% 5%;
+}
+
+.intro>p>span{
+   font-family: patrickHandregular_Font;
+   /* font-size: 24px; */
+   font-size: 1.25rem;
+   color: #408d86;
+}
+img{
+   border-radius: 10px;
+}
+
+
+
+/* Services */
+
+.F_Services>.container{
+   padding: 5%;
+   border-bottom: 1px solid #728f9e;
+}
+
+/* carousels */
+.service_carousel{
+display: none;
+}
+/* .service_text{display:none;} */
+
+
+/* Message */
+
+
+.text_details{
+   font-family: mainNav_Head_Font;
+   color: #408d86;
+   font-weight: 500;
+}
+
+
+
+/* Footer-fixed at bottom */
+.copyright{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* position:; */
+   bottom:0;
+   background-image: linear-gradient(to right,  #408d86 , #263339);
+   width: 100%;
+   /* text-align: center; */
+
+}
+.copyright p{
+   font-size: 1.5rem;
+  font-family: mainNav_Head_Font;
+   color:#ccc ;
+   padding: 0.25%;
+   /* padding: 10px; */
+}
